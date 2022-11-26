@@ -3,23 +3,45 @@ LINK = habsburg.csv
 
 FONT = Tangerine, 24, BT, #000000
 
+PAGE = 21.6, 27.9, PORTRAIT, HV
+
 <left_text>=0%,0%,20%,100%
 <right_text>=80%,0%,20%,100%
+<top_text>=20%,5%,60%,20%
+<bottom_text>=20%,75%,60%,20%
 
 <chief_dexter>=25%,25%,150%,150%
 <chief_sinister>=-75%,25%,150%,150%
 <base_dexter>=25%,-75%,150%,150%
 <base_sinister>=-75%,-75%,150%,150%
+<base_sinister>=-75%,-75%,150%,150%
+<full>=5%,25%,90%,70%
+<bend_sinister>=0%,0%,100%,100%
 
-TEXT  = 1-{(name)}, [name], <left_text>, center, wwcenter, 270
+TEXT  = 1-{(name)}, [name], <top_text>, center, wwcenter, 0
 IMAGE = 1-{(name)}, [img],  <chief_dexter>, 0, NP
+IMAGE = 1-{(name)}, [img],  5%,5%,15%,15%, 0, NP
 
-TEXT  = {(name)+1}-{2*(name)}, [name], <right_text>, center, wwcenter, 90
+TEXT  = {(name)+1}-{2*(name)}, [name], <top_text>, center, wwcenter, 0
 IMAGE = {(name)+1}-{2*(name)}, [img],  <chief_sinister>, 0, NP
+IMAGE = {(name)+1}-{2*(name)}, [img],  5%,5%,15%,15%, 0, NP
 
-TEXT  = {2*(name)+1}-{3*(name)}, [name], <left_text>, center, wwcenter, 270
-IMAGE = {2*(name)+1}-{3*(name)}, [img],  <base_dexter>, 0, NP
+TEXT  = {2*(name)+1}-{3*(name)}, [name], <top_text>, center, wwcenter, 0
+IMAGE = {2*(name)+1}-{3*(name)}, [img],  <chief_sinister>, 180, NP
+IMAGE = {2*(name)+1}-{3*(name)}, [img],  5%,5%,15%,15%, 0, NP
 
-TEXT  = {3*(name)+1}-{4*(name)}, [name], <right_text>, center, wwcenter, 90
-IMAGE = {3*(name)+1}-{4*(name)}, [img],  <base_sinister>, 0, NP
+TEXT  = {3*(name)+1}-{4*(name)}, [name], <top_text>, center, wwcenter, 0
+IMAGE = {3*(name)+1}-{4*(name)}, [img],  <chief_dexter>, 180, NP
+IMAGE = {3*(name)+1}-{4*(name)}, [img],  5%,5%,15%,15%, 0, NP
 
+TEXT  = {4*(name)+1}-{5*(name)}, [name], <top_text>, center, wwcenter
+IMAGE = {4*(name)+1}-{5*(name)}, [img],  <full>, 0, NP
+IMAGE = {4*(name)+1}-{5*(name)}, [img],  5%,5%,15%,15%, 0, NP
+LINERECT  = {4*(name)+1}-{5*(name)}, <bend_sinister>, #000000, 1, , 0, 0, G
+
+TEXT  = {5*(name)+1}-{6*(name)}, [name], <top_text>, center, wwcenter
+IMAGE = {5*(name)+1}-{6*(name)}, [img],  <full>, 0, NP
+IMAGE = {5*(name)+1}-{6*(name)}, [img],  5%,5%,15%,15%, 0, NP
+LINERECT  = {5*(name)+1}-{6*(name)}, <bend_sinister>, #000000, 1, , 0, 0, G
+
+TEXT  = 103-108, "", <top_text>, center, wwcenter

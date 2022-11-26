@@ -1,5 +1,7 @@
 LINK = generals.csv
 
+PAGE = 21.6, 27.9, PORTRAIT, HV
+
 ICON = , W, swords.png
 ICON = , K, skull.png
 
@@ -7,5 +9,8 @@ FONT = Tangerine, 18, BT, #000000
 TEXT   = 1-6, [name], 5%, 0%, 90%, 20%, center, wwcenter
 IMAGE  = 1-6, [img], 5%, 20%, 90%, 75%, 0, NP
 
-ICONS = , [icons], 5%, 0%, 20%, 20%, 10%, 10%, 0, PN, left, center
-ICONS = , [icons], 75%, 0%, 20%, 20%, 10%, 10%, 0, PN, right, center
+ICONS = 1-6, [icons], 5%, 0%, 20%, 20%, 10%, 10%, 0, PN, left, center
+'ICONS = 1-6, [icons], 75%, 0%, 20%, 20%, 10%, 10%, 0, PN, right, center
+
+TEXT   = 7-9, "", 5%, 0%, 90%, 20%, center, wwcenter
+
